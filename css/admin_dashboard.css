@@ -1,0 +1,304 @@
+/* =========================
+   ADMIN SIDEBAR
+========================= */
+
+.sidebar.admin-sidebar,
+.sidebar.admin-sidebar * {
+  box-sizing: border-box;
+}
+
+.sidebar.admin-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 256px;
+  height: 100vh;
+  height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+  border-right: 1px solid #e7e5e4;
+  overflow: hidden;
+
+  font-family: Inter, Arial, sans-serif;
+}
+
+/* Logo */
+
+.admin-sidebar .sidebar-logo {
+  width: 100%;
+  height: 96px;
+  padding: 0 20px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.admin-sidebar .parkzen-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.admin-sidebar .sidebar-logo .pz-badge {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid transparent;
+  border-radius: 50%;
+  outline: none;
+
+  background:
+    linear-gradient(#f3f4f6, #f3f4f6) padding-box,
+    conic-gradient(
+        from 225deg,
+        #ffffff,
+        #a1a1aa 25%,
+        #d4d4d8 50%,
+        #a1a1aa 75%,
+        #ffffff
+      )
+      border-box;
+
+  color: #111827;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.admin-sidebar .sidebar-logo .parkzen-name {
+  color: #1f2937;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/* Role */
+
+.admin-sidebar .sidebar-role {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 4px 16px 10px;
+
+  color: #9ca3af;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+/* Scrollable navigation */
+
+.admin-sidebar .sidebar-nav {
+  flex: 1;
+  min-height: 0;
+  padding: 12px 8px 20px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: thin;
+  scrollbar-color: #d6d3d1 transparent;
+}
+
+.admin-sidebar .nav-section-title {
+  padding: 18px 8px 8px;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 700;
+  color: #78716c;
+  letter-spacing: 1px;
+}
+
+.admin-sidebar .nav-item {
+  width: 100%;
+  height: auto;
+  min-height: 44px;
+  margin: 0 0 4px;
+  padding: 12px;
+
+  display: flex;
+  align-items: center;
+
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+
+  color: #1f2937;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  text-align: left;
+  text-decoration: none;
+
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.admin-sidebar .nav-item:hover {
+  background: #fafaf9;
+}
+
+.admin-sidebar .nav-item.active {
+  background: rgb(197, 194, 194);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  outline: 1px solid rgba(21, 21, 21, 0.2);
+}
+
+.admin-sidebar .nav-dot {
+  width: 6px;
+  height: 6px;
+  margin-right: 12px;
+  flex-shrink: 0;
+
+  background: #09090b;
+  border-radius: 50%;
+}
+
+.admin-sidebar .nav-item.active .nav-dot {
+  background: #999897;
+}
+
+.admin-sidebar .nav-text {
+  white-space: nowrap;
+}
+
+/* Fixed footer */
+
+.admin-sidebar .sidebar-footer {
+  flex-shrink: 0;
+  padding: 12px 8px;
+
+  background: #ffffff;
+  border-top: 1px solid #e7e5e4;
+}
+
+.admin-sidebar .sidebar-footer .logout-item {
+  margin: 0;
+}
+
+.admin-sidebar .logout-dot {
+  background: #94a3b8;
+}
+
+.admin-sidebar .logout-item:hover {
+  background: #fff1f2;
+  color: #dc2626;
+}
+
+.admin-sidebar .logout-item:hover .logout-dot {
+  background: #ef4444;
+}
+
+/* Scrollbar */
+
+.admin-sidebar .sidebar-nav::-webkit-scrollbar {
+  width: 5px;
+}
+
+.admin-sidebar .sidebar-nav::-webkit-scrollbar-thumb {
+  background: #d6d3d1;
+  border-radius: 10px;
+}
+
+.admin-sidebar .sidebar-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+  height: 100dvh;
+
+  overflow: hidden;
+}
+
+/* Logo stays at the top */
+
+.sidebar-logo {
+  height: 76px;
+  flex-shrink: 0;
+}
+
+/* Only navigation scrolls */
+
+.sidebar-nav {
+  flex: 1;
+  min-height: 0;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 12px 8px 20px;
+
+  scrollbar-width: thin;
+  scrollbar-color: #d6d3d1 transparent;
+}
+
+/* Bigger navigation items */
+
+.sidebar .nav-item {
+  height: auto;
+  min-height: 44px;
+  padding: 12px;
+
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.sidebar .nav-section-title {
+  padding: 18px 8px 8px;
+}
+
+/* Logout stays at the bottom */
+
+.sidebar-footer {
+  flex-shrink: 0;
+
+  padding: 12px 8px;
+  background: #ffffff;
+  border-top: 1px solid #e7e5e4;
+}
+
+.sidebar-footer .logout-item {
+  margin: 0;
+}
+
+/* Scrollbar appearance */
+
+.sidebar-nav::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: #d6d3d1;
+  border-radius: 10px;
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar-role {
+  padding: 4px 16px 10px;
+  color: #9ca3af;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}

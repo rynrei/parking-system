@@ -1,0 +1,386 @@
+/* Right-side Vehicle Entry content */
+
+.entry-page {
+  margin-left: 256px;
+  min-height: 100vh;
+  background: #f7f7f6;
+  color: #1f2937;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.entry-page,
+.entry-page * {
+  box-sizing: border-box;
+}
+
+.entry-topbar {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 20px 30px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.entry-content {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 28px 30px;
+}
+
+.entry-heading {
+  margin-bottom: 22px;
+}
+
+.entry-heading h1 {
+  margin: 0 0 6px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.entry-heading p,
+.entry-description {
+  margin: 0;
+  color: #89919e;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.entry-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 24px;
+}
+
+.entry-card {
+  min-width: 0;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid #e7e9ed;
+  border-radius: 16px;
+}
+
+.entry-card h2 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#vehicleEntryForm {
+  margin-top: 26px;
+}
+
+.entry-form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.entry-field {
+  position: relative;
+  min-width: 0;
+  margin-bottom: 18px;
+}
+
+.entry-field label {
+  display: block;
+  margin-bottom: 7px;
+  color: #758091;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.entry-field input,
+.entry-field select {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  color: #273142;
+  font: inherit;
+  font-size: 12px;
+}
+
+.entry-field input::placeholder {
+  color: #9aa2af;
+}
+
+.entry-field input:focus,
+.entry-field select:focus {
+  outline: none;
+  border-color: #d9ad47;
+  box-shadow: 0 0 0 3px rgb(217 173 71 / 12%);
+}
+
+.entry-field input:disabled,
+.entry-field select:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.entry-wheel-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 9px;
+}
+
+.entry-wheel {
+  min-height: 38px;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  color: #788293;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.entry-wheel.is-selected {
+  background: #111827;
+  border-color: #111827;
+  color: #fff;
+}
+
+.entry-help {
+  display: block;
+  margin-top: 6px;
+  color: #929baa;
+  font-size: 10px;
+}
+
+.entry-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.entry-submit,
+.entry-clear {
+  min-height: 42px;
+  padding: 0 26px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.entry-submit {
+  min-width: 180px;
+  background: #111827;
+  border: 1px solid #111827;
+  color: #fff;
+}
+
+.entry-submit:hover {
+  background: #263244;
+}
+
+.entry-clear {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  color: #566173;
+}
+
+.entry-clear:hover {
+  background: #f8fafc;
+}
+
+.entry-page button:focus-visible,
+.entry-pagination a:focus-visible {
+  outline: 2px solid #d9ad47;
+  outline-offset: 3px;
+}
+
+/* Existing autocomplete elements */
+
+.entry-field .suggestions {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 220px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 8%);
+  z-index: 20;
+}
+
+.entry-field .suggestion-item {
+  padding: 11px 12px;
+  color: #374151;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.entry-field .suggestion-item:hover {
+  background: #fff8e8;
+}
+
+/* Today's entries */
+
+.entry-recent {
+  display: flex;
+  flex-direction: column;
+  min-height: 610px;
+}
+
+.entry-table-scroll {
+  margin-top: 26px;
+  overflow-x: auto;
+}
+
+.entry-table {
+  width: 100%;
+  min-width: 510px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.entry-table th {
+  padding: 0 8px 14px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #9aa3b1;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.entry-table td {
+  padding: 17px 8px;
+  border-bottom: 1px solid #eef0f3;
+  color: #778292;
+  font-size: 11px;
+}
+
+.entry-table .entry-id {
+  color: #929baa;
+  white-space: nowrap;
+}
+
+.entry-table .entry-plate {
+  color: #273142;
+  font-weight: 600;
+}
+
+.entry-table .entry-slot {
+  color: #c99b35;
+  font-weight: 600;
+}
+
+.entry-slot small {
+  display: block;
+  margin-top: 4px;
+  color: #9aa3b1;
+  font-size: 9px;
+  font-weight: 400;
+}
+
+.entry-status {
+  display: inline-flex;
+  padding: 5px 9px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.entry-status.is-active {
+  background: #ecfdf5;
+  border-color: #c7f1de;
+  color: #059669;
+}
+
+.entry-status.is-exited {
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+  color: #64748b;
+}
+
+.entry-table .entry-empty {
+  padding: 42px 8px;
+  text-align: center;
+}
+
+.entry-table-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: auto;
+  padding-top: 28px;
+}
+
+.entry-table-footer p {
+  margin: 0;
+  color: #8b95a3;
+  font-size: 11px;
+}
+
+.entry-pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.entry-pagination a,
+.entry-pagination span {
+  padding: 7px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.entry-pagination span {
+  background: #111827;
+  border-color: #111827;
+  color: #fff;
+}
+
+@media (max-width: 1150px) {
+  .entry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .entry-recent {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 700px) {
+  .entry-content {
+    padding: 18px;
+  }
+
+  .entry-card {
+    padding: 18px;
+  }
+
+  .entry-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .entry-actions {
+    flex-wrap: wrap;
+  }
+
+  .entry-submit {
+    min-width: 130px;
+  }
+}

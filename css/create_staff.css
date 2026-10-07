@@ -1,0 +1,433 @@
+/* =========================================
+   MANAGE ADMINS PAGE
+========================================= */
+
+.manage-header {
+    height: 76px;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 32px;
+}
+
+.manage-header h1 {
+    margin: 0;
+
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+
+    color: #111827;
+}
+
+/* =========================================
+   PAGE CONTENT
+========================================= */
+
+.manage-page {
+    padding: 24px 32px 40px;
+}
+
+.manage-title {
+    margin-bottom: 28px;
+}
+
+.manage-title h2 {
+    margin: 0 0 6px;
+
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+
+    color: #111827;
+}
+
+.manage-title p {
+    margin: 0;
+
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+
+    color: #6b7280;
+}
+
+
+/* =========================================
+   TWO CARD LAYOUT
+========================================= */
+
+.admin-content-grid {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    gap: 24px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.admin-card {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   ADD ADMIN CARD
+========================================= */
+
+.add-admin-card {
+    padding: 22px 18px 20px;
+}
+
+.admin-card-header {
+    margin-bottom: 22px;
+}
+
+.admin-card-header h3 {
+    margin: 0 0 6px;
+
+    font-family: Inter, sans-serif;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: #111827;
+}
+
+.admin-card-header p {
+    margin: 0;
+
+    font-family: Inter, sans-serif;
+
+    font-size: 12px;
+
+    color: #6b7280;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 26px;
+
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 7px;
+
+    font-family: Inter, sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+
+    color: #6b7280;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    height: 36px;
+
+    box-sizing: border-box;
+
+    padding: 0 13px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 8px;
+
+    background: #f3f4f6;
+
+    outline: none;
+
+    font-family: Inter, sans-serif;
+
+    font-size: 12px;
+
+    color: #374151;
+}
+
+.form-group input::placeholder {
+    color: #9ca3af;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #d1d5db;
+
+    background: #ffffff;
+}
+
+
+/* =========================================
+   CREATE BUTTON
+========================================= */
+
+.create-admin-btn {
+    width: 192px;
+    height: 40px;
+
+    margin-top: 2px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #111827;
+
+    color: #ffffff;
+
+    font-family: Inter, sans-serif;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.create-admin-btn:hover {
+    background: #1f2937;
+}
+
+
+/* =========================================
+   REGISTERED ADMIN CARD
+========================================= */
+
+.registered-admin-card {
+    padding: 22px 24px 20px;
+}
+
+.registered-admin-card .admin-card-header {
+    margin-bottom: 24px;
+}
+
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.admin-table-header {
+    display: grid;
+
+    grid-template-columns:
+        1.2fr
+        1.1fr
+        0.85fr
+        0.7fr;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+.admin-table-header span {
+    font-family: Inter, sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 0.05em;
+
+    color: #6b7280;
+}
+
+.admin-divider {
+    width: 100%;
+    height: 1px;
+
+    background: #e5e7eb;
+}
+
+
+/* =========================================
+   ADMIN ROW
+========================================= */
+
+.admin-row {
+    display: grid;
+
+    grid-template-columns:
+        1.2fr
+        1.1fr
+        0.85fr
+        0.7fr;
+
+    min-height: 58px;
+
+    padding: 10px 0;
+
+    align-items: center;
+}
+
+.admin-name {
+    font-family: Inter, sans-serif;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    color: #111827;
+}
+
+.admin-name small {
+    display: block;
+
+    margin-top: 6px;
+
+    font-size: 11px;
+    font-weight: 400;
+
+    color: #6b7280;
+}
+
+.admin-username {
+    font-family: Inter, sans-serif;
+
+    font-size: 12px;
+
+    color: #6b7280;
+}
+
+.admin-role {
+    font-family: Inter, sans-serif;
+
+    font-size: 12px;
+
+    color: #374151;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 64px;
+    height: 20px;
+
+    padding: 0 8px;
+
+    box-sizing: border-box;
+
+    border-radius: 6px;
+
+    font-family: Inter, sans-serif;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.status.active {
+    color: #4ade80;
+
+    background: rgba(74, 222, 128, 0.10);
+
+    border: 1px solid rgba(74, 222, 128, 0.25);
+}
+
+.status.inactive {
+    color: #78716c;
+
+    background: rgba(161, 161, 170, 0.20);
+
+    border: 1px solid rgba(161, 161, 170, 0.30);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .admin-content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .registered-admin-card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .manage-page {
+        padding: 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .admin-table-header,
+    .admin-row {
+        grid-template-columns:
+            1fr
+            1fr
+            1fr
+            0.8fr;
+    }
+
+    .admin-card {
+        overflow-x: auto;
+    }
+
+}
+.no-admins {
+    padding: 30px 0;
+
+    text-align: center;
+
+    font-family: Inter, sans-serif;
+
+    font-size: 12px;
+
+    color: #9ca3af;
+}
+.main-content {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 40px;
+}
